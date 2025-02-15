@@ -25,8 +25,8 @@ def scrape(url, text, want_status):
                     if want_status:
                         print(f"Failed to crawl {url}. Status code: {response.status_code}")
                     print(f"Failed to crawl {url}")
-                crawl(tag['href'], text)
-                print(crawl(tag['href'], text, False))
+                scrape(tag['href'], text)
+                print(scrape(tag['href'], text, False))
                 sleep(1)
 
     else:
